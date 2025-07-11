@@ -90,5 +90,61 @@ function toggleTaskCompletion(id){
 }
 
 // To filter for completed
+function filterCompleted(){
+    // To create completed task list object
+    const completedTaskList = [];
+    for (let i = 0 ; i < taskList.length ; i++){
+        if (taskList[i].completed == true){
+            completedTaskList.push(taskList[i]);
+        }
+    }
+    // To create task list display object
+    const completedTaskDisplayList = document.getElementById('task-list');
+    // To clear the current display list
+    completedTaskDisplayList.innerHTML = '';
+    completedTaskList.forEach(element =>{
+        const completedTaskItem = `
+        <div>
+            <span>${element.task}</span>
+            <span>${element.dueDate}</span>
+            <button onclick = "toggleTaskCompletion(${element.id})">
+                ${element.completed ? 'Completed' : "Not Completed"}
+            </button>
+            <button onclick = "deleteTask(${element.id})">
+                Delete
+            </button>
+        </div>
+        `;
+        completedTaskDisplayList.innerHTML += completedTaskItem;
+    });
+}
 
 // To filter for not completed
+function filterNotCompleted(){
+    // To create not completed task list object
+    const notCompletedTaskList = [];
+    for (let i = 0 ; i < taskList.length ; i++){
+        if (taskList[i].completed == false){
+            notCompletedTaskList.push(taskList[i]);
+        }
+    }
+    // To create task list display object
+    const notCompletedTaskDisplayList = document.getElementById('task-list');
+    // To clear the current display list
+    notCompletedTaskDisplayList.innerHTML = '';
+    notCompletedTaskList.forEach(element =>{
+        const notCompletedTaskItem = `
+        <div>
+            <span>${element.task}</span>
+            <span>${element.dueDate}</span>
+            <button onclick = "toggleTaskCompletion(${element.id})">
+                ${element.completed ? 'Completed' : "Not Completed"}
+            </button>
+            <button onclick = "deleteTask(${element.id})">
+                Delete
+            </button>
+        </div>
+        `;
+        notCompletedTaskDisplayList.innerHTML += notCompletedTaskItem;
+    });
+}
