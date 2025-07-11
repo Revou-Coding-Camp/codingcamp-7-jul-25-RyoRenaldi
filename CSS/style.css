@@ -12,6 +12,10 @@ body {
     font-family: 'Bahnschrift';
 }
 
+.body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 main {
     background-color: aliceblue;
     width: 400px;
