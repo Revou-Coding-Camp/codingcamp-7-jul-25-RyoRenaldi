@@ -9,7 +9,7 @@
      <link rel = "stylesheet" href = "css/style.css">
     
 </head>
-<body>
+<body class="body">
     
     <header>
         <h1>To-Do List</h1>
@@ -26,13 +26,13 @@
         </form>
 
         <section>
-            <div>
+            <div class="button1">
                 <button onclick="filterCompleted()">Show Completed</button>
                 <button onclick="filterNotCompleted()">Show Not Completed</button>
                 <button onclick="displayTask()">Show All</button>
             </div>
 
-            <button onclick="deleteAllTasks();">Delete All</button>
+            <button class="button2" onclick="deleteAllTasks();">Delete All</button>
         </section>
 
         <!-- To-Do List -->
@@ -42,8 +42,8 @@
             </header>
             
             <!-- Task List-->
-            <div id="task-list">
-                <p class="list">Task is Empty!</p>
+            <div class="list" id="task-list">
+                <p >Task is Empty!</p>
             </div>
         </section>
 

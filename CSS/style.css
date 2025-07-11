@@ -1,5 +1,11 @@
 html {
-    background-color: darkslategray;
+    background-color:gold;
+}
+
+body {
+    justify-self: center;
+    text-align: center;
+    margin: 10%;
 }
 
 .body {
@@ -10,12 +16,23 @@ main {
     background-color: aliceblue;
     width: 400px;
     font-size: medium;
-    justify-content: center;
+    justify-self: center;
 }
 
-form {
-    justify-self: flex-start;
+.form {
+    justify-self: center;
+    padding: 10px;
 }
 
+.addbutton {
+    justify-content: end;
+}
 
+.button1 {
+    justify-items: end;
+    margin: 10px;
+}
 
+.list{
+    justify-items: center;
+}
