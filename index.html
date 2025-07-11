@@ -7,7 +7,7 @@
 
     <!-- CSS External link -->
      <link rel = "stylesheet" href = "css/style.css">
-
+    
 </head>
 <body>
     
@@ -17,19 +17,19 @@
 
     <main>
         <form>
-            <div>
+            <div class="form">
                 <input type="text" id="task-input" placeholder="Add a new task">
                 <input type="date" id="due-date-input" placeholder="Due date">
+                <button type="button" onclick="addTask();">Add</button>
             </div>
 
-            <button type="button" onclick="addTask();">Add</button>
         </form>
 
         <section>
             <div>
-                <button onclick="filterCompleted">Show Completed</button>
-                <button onclick="filterNotCompleted">Show Not Completed</button>
-                <button onclick="displayTask">Show All</button>
+                <button onclick="filterCompleted()">Show Completed</button>
+                <button onclick="filterNotCompleted()">Show Not Completed</button>
+                <button onclick="displayTask()">Show All</button>
             </div>
 
             <button onclick="deleteAllTasks();">Delete All</button>
@@ -43,7 +43,7 @@
             
             <!-- Task List-->
             <div id="task-list">
-                <p>Task is Empty!</p>
+                <p class="list">Task is Empty!</p>
             </div>
         </section>
 
